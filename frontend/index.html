@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <header>
+      <h1 id="app-title">Task Manager</h1>
+    </header>
+
+    <!-- Task Statistics -->
+    <section id="stats-section">
+      <div class="stat-card">
+        <div class="stat-label">Total Tasks</div>
+        <div class="stat-value" id="stat-total">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Completed</div>
+        <div class="stat-value" id="stat-completed">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Pending</div>
+        <div class="stat-value" id="stat-pending">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">High Priority</div>
+        <div class="stat-value" id="stat-high-priority">0</div>
+      </div>
+    </section>
+
+    <!-- Add Task Form -->
+    <section id="task-form-section">
+      <form id="task-form">
+        <div class="form-group">
+          <label for="task-title">Task Title</label>
+          <input type="text" id="task-title" name="taskTitle" placeholder="Enter task title" />
+        </div>
+
+        <div class="form-group">
+          <label for="task-description">Task Description</label>
+          <textarea
+            id="task-description"
+            name="taskDescription"
+            rows="3"
+            placeholder="Enter task description"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="task-priority">Priority</label>
+          <select id="task-priority" name="taskPriority">
+            <option value="high">High</option>
+            <option value="medium" selected>Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="task-due-date">Due Date</label>
+          <input type="date" id="task-due-date" name="taskDueDate" />
+        </div>
+
+        <button type="submit" id="add-task-btn">Add Task</button>
+      </form>
+    </section>
+
+    <!-- Search & Filters -->
+    <section id="controls-section">
+      <div class="search-group">
+        <label for="search-box" class="visually-hidden">Search Tasks</label>
+        <input
+          type="text"
+          id="search-box"
+          placeholder="Search tasks..."
+        />
+      </div>
+
+      <div id="filter-buttons">
+        <button type="button" id="filter-all">All</button>
+        <button type="button" id="filter-pending">Pending</button>
+        <button type="button" id="filter-completed">Completed</button>
+        <button type="button" id="filter-high-priority">High Priority</button>
+      </div>
+    </section>
+
+    <!-- Tasks List -->
+    <section id="tasks-section">
+      <div id="tasks-container">
+        <!-- Tasks will be rendered here by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
