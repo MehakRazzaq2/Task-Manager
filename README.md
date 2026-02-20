@@ -39,6 +39,3 @@ A lightweight, browser-based task management application built with vanilla Java
 - User authentication
 
 
-## License
-
-This project is licensed under the MIT Lic
